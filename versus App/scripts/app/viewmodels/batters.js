@@ -15,8 +15,8 @@ define(["kendo", "app/data/battersData", "app/common", "app/config"], function (
     }());
     
     var viewModel = (function () {
-        
-        var tap = function (e) {
+
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = battersData.data.dataSource.getByUid(itemUID);
@@ -24,10 +24,19 @@ define(["kendo", "app/data/battersData", "app/common", "app/config"], function (
                 config.params.batterIdSlashYearId = model.retro_player_id +'/'+ config.params.yearId;
                 app.application.navigate("views/pitchers.html");
             }
-        }
-        return {
-            tap: tap
         };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
+        return {
+            tap: tap,
+            touchStart: touchStart
+        };        
         
     }());
     

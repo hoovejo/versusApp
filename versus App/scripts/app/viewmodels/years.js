@@ -1,17 +1,26 @@
 define(["kendo", "app/data/yearsData", "app/common", "app/config"], function (kendo, yearsData, common, config) {
     
     var viewModel = (function () {
-        
-        var tap = function (e) {
+
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 config.params.yearId = yearsData.data.dataSource.getByUid(itemUID).id;
                 app.application.navigate("views/teams.html");
             }
-        }
-        return {
-            tap: tap
         };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
+        return {
+            tap: tap,
+            touchStart: touchStart
+        };        
         
     }());
     

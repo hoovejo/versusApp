@@ -15,18 +15,27 @@ define(["kendo", "app/data/pitchersData", "app/common", "app/config"], function 
     }());
     
     var viewModel = (function () {
-        
-        var tap = function (e) {
+
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = pitchersData.data.dataSource.getByUid(itemUID);
                 config.params.pResultSearch = config.params.batterId + '/' + model.retro_id;
                 app.application.navigate("views/playerResults.html");
             }
-        }
-        return {
-            tap: tap
         };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
+        return {
+            tap: tap,
+            touchStart: touchStart
+        };        
         
     }());
     

@@ -16,16 +16,25 @@ define(["kendo", "app/data/playerResultsData", "app/common", "app/config"], func
     
     var viewModel = (function () {
 
-        var tap = function (e) {
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = playerResultsData.data.dataSource.getByUid(itemUID);
                 config.params.pDrillDown = model.drilldown();
                 app.application.navigate("views/playerDrillDown.html");
             }
-        }
+        };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
         return {
-            tap: tap
+            tap: tap,
+            touchStart: touchStart
         };
         
     }());

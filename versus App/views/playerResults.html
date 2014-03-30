@@ -9,7 +9,7 @@
 	<ul id="playerResultsListView" data-role="listview" data-style="inset"></ul>
 </div> 
 <script type="text/x-kendo-template" id="playerResultsListViewTemplate">
-	<div data-role="touch" data-tap="app.views.playerResults.viewModel.tap">
+	<div data-role="touch" data-tap="app.views.playerResults.viewModel.tap" data-touchstart="app.views.playerResults.viewModel.touchStart">
         <a data-role="button" data-icon="more" class="value"></a>
 	</div>
 	<li class="item-info">Type<span class="value">#: Type #</span></li>

@@ -18,7 +18,7 @@ var setTrueForWindows = function() {
 	<ul id="franchiseResultsListView" data-role="listview" data-style="inset"></ul>
 </div>
 <script type="text/x-kendo-template" id="franchiseResultsListViewTemplate">
-	<div data-role="touch" data-tap="app.views.franchiseResults.viewModel.tap">
+	<div data-role="touch" data-tap="app.views.franchiseResults.viewModel.tap" data-touchstart="app.views.franchiseResults.viewModel.touchStart" >
         <a data-role="button" data-icon="more" class="value"></a>
 	</div>
 	<li class="item-info">Games<span class="value">#: games #</span></li>

@@ -1,17 +1,26 @@
 define(["kendo", "app/data/franchisesData", "app/common", "app/config"], function (kendo, franchisesData, common, config) {
 
     var viewModel = (function () {
-        
-        var tap = function (e) {
+
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = franchisesData.data.dataSource.getByUid(itemUID);
                 config.params.franchiseId = model.retro_id;
                 app.application.navigate("views/opponents.html");
             }            
-        }
+        };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
         return {
-            tap: tap
+            tap: tap,
+            touchStart: touchStart
         };
         
     })();

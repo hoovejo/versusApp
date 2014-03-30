@@ -15,18 +15,26 @@ define(["kendo", "app/data/franchiseResultsData", "app/common", "app/config"], f
     }());
     
     var viewModel = (function () {
-
-        var tap = function (e) {
+        
+        var _nav = function(e){
 			var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = franchiseResultsData.data.dataSource.getByUid(itemUID);
                 config.params.fDrillDown = model.drilldown();
                 app.application.navigate("views/franchiseDrillDown.html");
             }
-        }
+        };
 
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+        
         return {
             tap: tap,
+            touchStart: touchStart
         };
         
     }());

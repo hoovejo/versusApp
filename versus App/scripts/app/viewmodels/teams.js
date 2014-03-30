@@ -15,18 +15,27 @@ define(["kendo", "app/data/teamsData", "app/common", "app/config"], function (ke
     }());
     
     var viewModel = (function () {
-        
-        var tap = function (e) {
+
+        var _nav = function(e){
             var itemUID = $(e.touch.currentTarget.parentNode).data("uid");
             if(itemUID !== undefined && !app.getIsLoading()) {
                 var model = teamsData.data.dataSource.getByUid(itemUID);
                 config.params.teamIdSlashYearId = model.team_id + '/' + model.year_id;
                 app.application.navigate("views/batters.html");
             }
-        }
-        return {
-            tap: tap
         };
+
+        var tap = function (e) {
+            _nav(e);
+        };
+        var touchStart = function (e){
+            _nav(e);
+        };
+
+        return {
+            tap: tap,
+            touchStart: touchStart
+        };        
         
     }());
     
