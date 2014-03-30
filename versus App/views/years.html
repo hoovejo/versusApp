@@ -1,0 +1,18 @@
+<!--Batter vs Pitcher main view-->
+<div id="players-view" 
+    data-role="view"
+    data-layout="player-layout"
+    data-init="app.views.years.init"
+    data-show="app.views.years.show" 
+    data-model="app.views.years.viewModel">
+
+	<ul id="yearsListView" data-role="listview" data-style="inset"></ul>
+</div>
+<script id="yearsListViewTemplate" type="text/x-kendo-template">
+    <div style="width: 15%; float: left;"></div>
+    <div style="width: 15%; float: right;"></div>
+	<h4 data-role="touch" data-tap="app.views.years.viewModel.tap"
+    	style="width: 70%; margin-left: auto; margin-right: auto; text-align: left;">
+        #: id #
+	</h4>
+</script>

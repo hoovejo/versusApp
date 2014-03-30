@@ -3,6 +3,43 @@ body, html {
     height: 100%;
     width: 100%;
 }
+/* Custom added styles*/
+#playerResults-view p,
+#franchiseResults-view p {
+    font-size: 1.1em;
+    color: blue;
+}
+.value {
+    float: right;
+}
+html .km-wp-light .km-content,
+html .km-wp-light .km-button,
+html .km-wp-light .km-navbar,
+html .km-wp-light .km-detail,
+html .km-wp-light *:not(.k-label) > input:not(.k-input),
+html .km-wp-light .k-dropdown,
+html .km-wp-light *:not(.k-label) > textarea,
+html .km-wp-light *:not(.k-label) > select {
+    background: #fff;
+}
+#appBody .m-selected-btn {
+    color: HighlightText;
+    background:Highlight;
+    background-color: #f60;
+}
+/* solid filled buttons in iOS7 should override the border-color */
+#appBody.km-ios7 .m-selected-btn
+{
+    border-color: transparent;
+}
+#appBody.km-ios7 .km-tabstrip,
+#appBody.km-wp .km-tabstrip
+{
+    padding: .2em 0 2em;
+}
+#appBody .km-list .item-info{
+    padding: 0 .5em 0 .5em;
+}
 
 /* COMMON STYLES*/
 .view-content h1 {

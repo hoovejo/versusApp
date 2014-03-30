@@ -1,0 +1,18 @@
+<!--Team vs Team drilldown-->
+<div id="franchiseDrillDown-view"
+    data-role="view"
+    data-layout="franchise-layout"
+    data-init="app.views.franchiseDrillDown.init"
+    data-show="app.views.franchiseDrillDown.show" 
+    data-model="app.views.franchiseDrillDown.viewModel">
+
+	<ul id="franchiseDrillDownListView" data-role="listview" data-style="inset"></ul>
+</div>
+<script type="text/x-kendo-template" id="franchiseDrillDownTemplate">
+	<li class="item-info">Team<span class="value">#: team #</span></li>
+	<li class="item-info">Opponent<span class="value">#: opponent #</span></li>
+	<li class="item-info">Win<span class="value">#: win #</span></li>
+	<li class="item-info">Loss<span class="value">#: loss #</span></li>
+    <li class="item-info">Runs For<span class="value">#: runs_for #</span></li>
+    <li class="item-info">Runs Against<span class="value">#: runs_against #</span></li>
+</script>

@@ -1,0 +1,18 @@
+<!--Team vs Team select opponent-->
+<div id="opponents-view"
+    data-role="view"
+    data-layout="franchise-layout"
+    data-init="app.views.opponents.init" 
+    data-show="app.views.opponents.show" 
+    data-model="app.views.opponents.viewModel">
+
+	<ul id="opponentsListView" data-role="listview" data-style="inset"></ul>
+</div>
+<script id="opponentsListViewTemplate" type="text/x-kendo-template">
+    <div style="width: 15%; float: left;"></div>
+    <div style="width: 15%; float: right;"></div>
+	<h4 data-role="touch" data-tap="app.views.opponents.viewModel.tap"
+    	style="width: 70%; margin-left: auto; margin-right: auto; text-align: left;">
+        #: location # #: name #
+	</h4>
+</script>

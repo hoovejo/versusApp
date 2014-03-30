@@ -1,0 +1,28 @@
+<!--Batter vs Pitcher results-->
+<div id="playerResults-view" 
+    data-role="view"
+    data-layout="player-layout"
+    data-init="app.views.playerResults.init"
+    data-show="app.views.playerResults.show" 
+    data-model="app.views.playerResults.viewModel">
+
+	<ul id="playerResultsListView" data-role="listview" data-style="inset"></ul>
+</div> 
+<script type="text/x-kendo-template" id="playerResultsListViewTemplate">
+	<div data-role="touch" data-tap="app.views.playerResults.viewModel.tap">
+        <a data-role="button" data-icon="more" class="value"></a>
+	</div>
+	<li class="item-info">Type<span class="value">#: Type #</span></li>
+	<li class="item-info">G<span class="value">#: G #</span></li>
+	<li class="item-info">AB<span class="value">#: AB #</span></li>
+	<li class="item-info">H<span class="value">#: H #</span></li>
+	<li class="item-info">2B<span class="value">#: two_b #</span></li>
+	<li class="item-info">3B<span class="value">#: three_b #</span></li>
+	<li class="item-info">HR<span class="value">#: HR #</span></li>
+	<li class="item-info">RBI<span class="value">#: RBI #</span></li>
+	<li class="item-info">SO<span class="value">#: SO #</span></li>
+	<li class="item-info">BB<span class="value">#: BB #</span></li>
+	<li class="item-info">AVG<span class="value">#: AVG #</span></li>
+</script>
+
+ 

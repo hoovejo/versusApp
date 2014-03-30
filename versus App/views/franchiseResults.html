@@ -1,0 +1,31 @@
+<script>
+var setTrueForWindows = function() {
+	var os = kendo.support.mobileOS;
+	if (os.wp){
+		return true;
+	}
+	return false;
+};
+</script>
+<!--Team vs Team results-->
+<div id="franchiseResults-view"
+    data-role="view"
+    data-layout="franchise-layout"
+    data-init="app.views.franchiseResults.init"
+    data-show="app.views.franchiseResults.show" 
+    data-model="app.views.franchiseResults.viewModel" data-use-native-scrolling=setTrueForWindows() >
+
+	<ul id="franchiseResultsListView" data-role="listview" data-style="inset"></ul>
+</div>
+<script type="text/x-kendo-template" id="franchiseResultsListViewTemplate">
+	<div data-role="touch" data-tap="app.views.franchiseResults.viewModel.tap">
+        <a data-role="button" data-icon="more" class="value"></a>
+	</div>
+	<li class="item-info">Games<span class="value">#: games #</span></li>
+	<li class="item-info">Team<span class="value">#: team #</span></li>
+	<li class="item-info">Opponent<span class="value">#: opponent #</span></li>
+	<li class="item-info">Wins<span class="value">#: wins #</span></li>
+	<li class="item-info">Losses<span class="value">#: losses #</span></li>
+	<li class="item-info">Runs For<span class="value">#: runs_for #</span></li>
+	<li class="item-info">Runs Against<span class="value">#: runs_against #</span></li>
+</script>

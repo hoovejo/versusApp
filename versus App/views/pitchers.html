@@ -1,0 +1,18 @@
+<!--Batter vs Pitcher select pitcher-->
+<div id="pitchers-view" 
+    data-role="view"
+    data-layout="player-layout"
+    data-init="app.views.pitchers.init"
+    data-show="app.views.pitchers.show" 
+    data-model="app.views.pitchers.viewModel">
+
+    <ul id="pitchersListView" data-role="listview" data-style="inset"></ul>
+</div> 
+<script id="pitchersListViewTemplate" type="text/x-kendo-template">
+    <div style="width: 15%; float: left;"></div>
+    <div style="width: 15%; float: right;"></div>
+	<h4 data-role="touch" data-tap="app.views.pitchers.viewModel.tap"
+    	style="width: 70%; margin-left: auto; margin-right: auto; text-align: left;">
+        #: first_name # #: last_name #
+	</h4>    
+</script> 

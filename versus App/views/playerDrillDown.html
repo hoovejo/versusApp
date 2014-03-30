@@ -1,0 +1,22 @@
+<!--Batter vs Pitcher drilldown-->
+<div id="playerDrillDown-view" 
+    data-role="view"
+    data-layout="player-layout"
+    data-init="app.views.playerDrillDown.init"
+    data-show="app.views.playerDrillDown.show" 
+    data-model="app.views.playerDrillDown.viewModel">
+
+	<ul id="playerDrillDownListView" data-role="listview" data-style="inset"></ul>
+</div>
+<script type="text/x-kendo-template" id="playerDrillDownTemplate">
+	<li class="item-info">AB<span class="value">#: AB #</span></li>
+	<li class="item-info">H<span class="value">#: H #</span></li>
+	<li class="item-info">2B<span class="value">#: two_b #</span></li>
+	<li class="item-info">3B<span class="value">#: three_b #</span></li>
+	<li class="item-info">HR<span class="value">#: HR #</span></li>
+	<li class="item-info">RBI<span class="value">#: RBI #</span></li>
+	<li class="item-info">SO<span class="value">#: SO #</span></li>
+	<li class="item-info">BB<span class="value">#: BB #</span></li>
+	<li class="item-info">AVG<span class="value">#: AVG #</span></li>
+</script>
+ 
