@@ -70,9 +70,11 @@ define(["jQuery", "kendo",
                 }
             },
             endRemote: function () {
-                if(_kendoApplication && _isLoading) { 
-                    _kendoApplication.hideLoading(); 
-                    _isLoading = false; 
+                if(_kendoApplication && _isLoading) {
+                    setTimeout(function(){
+                    	_kendoApplication.hideLoading(); 
+                    	_isLoading = false;
+					}, 100);
                 }
             },
             getIsLoading: function(){ return _isLoading; },
