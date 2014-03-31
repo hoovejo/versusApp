@@ -38,7 +38,7 @@ define(["kendo", "app/data/playerDrillDownData", "app/common", "app/config"], fu
             if (helper.checkLoad(config.params.pDrillDown)) {
                 var data = playerDrillDownData.data,
                 	urlBase = config.remoteServices.playerPlayerYearSearch;
-    			data.dataSource.data({});
+    			//data.dataSource.data({});
                 data.params = config.params.pDrillDown;
                 data.svcUrl = urlBase + data.params +'.json';
                 data.dataSource.read();

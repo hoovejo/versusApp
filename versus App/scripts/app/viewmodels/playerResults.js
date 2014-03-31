@@ -68,7 +68,7 @@ define(["kendo", "app/data/playerResultsData", "app/common", "app/config"], func
                     var data = playerResultsData.data,
                         params = config.params.pResultSearch,
                         urlBase = config.remoteServices.playerPlayerSearch;
-    				data.dataSource.data({});
+    				//data.dataSource.data({});
                     data.champSlashOppo = params;//aybae001/beckj002
                     data.svcUrl = urlBase + params +'.json';
                 	data.dataSource.read();

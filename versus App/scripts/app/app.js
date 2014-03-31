@@ -37,8 +37,23 @@ define(["jQuery", "kendo",
                     layout: 'default-layout', 
                     initial: 'default-view',
                     transition: 'slide',
-                    statusBarStyle: statusBarStyle
+                    statusBarStyle: statusBarStyle,
+                    useNativeScrolling: false
                 });
+                
+                //$(document).ready(function() {
+                //    $("#ad-main iframe").each(function() {
+                //        $(this).one('load', function() {
+                //            $(this).contents().find('a[href^="http"]').each(function() {
+                //                $(this).click(function(event){
+                //                    event.preventDefault();
+                //                    window.open($(this).attr("href"), '_system','location=yes');
+                //                });
+                //            });
+                //        });
+            	//	});
+                //});
+
                 app.application = _kendoApplication;
             },
             views: {

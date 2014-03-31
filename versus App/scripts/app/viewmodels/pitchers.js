@@ -67,7 +67,7 @@ define(["kendo", "app/data/pitchersData", "app/common", "app/config"], function 
                 var data = pitchersData.data,
                     params = config.params.batterIdSlashYearId,
                     urlBase = config.remoteServices.opponentsForBatter;
-                data.dataSource.data({});
+                //data.dataSource.data({});
                 data.svcUrl = urlBase + params +'.json';
             	data.dataSource.read();
     			common.resetJsScroller(e);

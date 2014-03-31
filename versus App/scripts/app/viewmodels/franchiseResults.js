@@ -69,7 +69,7 @@ define(["kendo", "app/data/franchiseResultsData", "app/common", "app/config"], f
                     var data = franchiseResultsData.data,
                         params = config.params.fResultSearch,
                         urlBase = config.remoteServices.franchiseSearch;
-                    data.dataSource.data({});//clear out last results
+                    //data.dataSource.data({});//clear out last results
                     data.champSlashOppo = params;//ATL/BAL
                     data.svcUrl = urlBase + params +'.json';
                 	data.dataSource.read();

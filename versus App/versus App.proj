@@ -7,8 +7,8 @@
     <ProjectName>versus App</ProjectName>
     <IsRunnable>true</IsRunnable>
     <FrameworkVersion>3.2.0</FrameworkVersion>
-    <AndroidPermissions>android.permission.VIBRATE;android.permission.INTERNET;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE</AndroidPermissions>
-    <CorePlugins>org.apache.cordova.console;org.apache.cordova.device;org.apache.cordova.device-motion;org.apache.cordova.device-orientation;org.apache.cordova.network-information;org.apache.cordova.dialogs;org.apache.cordova.splashscreen;org.apache.cordova.statusbar;org.apache.cordova.vibration</CorePlugins>
+    <AndroidPermissions>android.permission.ACCESS_NETWORK_STATE;android.permission.INTERNET;android.permission.VIBRATE;android.permission.WRITE_EXTERNAL_STORAGE</AndroidPermissions>
+    <CorePlugins>org.apache.cordova.console;org.apache.cordova.device;org.apache.cordova.device-motion;org.apache.cordova.device-orientation;org.apache.cordova.inappbrowser;org.apache.cordova.network-information;org.apache.cordova.dialogs;org.apache.cordova.splashscreen;org.apache.cordova.statusbar;org.apache.cordova.vibration</CorePlugins>
     <DeviceOrientations>Portrait;Landscape</DeviceOrientations>
     <iOSStatusBarStyle>Default</iOSStatusBarStyle>
     <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
@@ -17,10 +17,16 @@
     <DisplayName>Baseball stats</DisplayName>
     <iOSDisplayName />
     <Description>Baseball stats</Description>
-    <WP8Capabilities>ID_CAP_NETWORKING</WP8Capabilities>
+    <WP8Capabilities>ID_CAP_NETWORKING;ID_CAP_WEBBROWSERCOMPONENT</WP8Capabilities>
     <WP8TileTitle>Baseball stats</WP8TileTitle>
     <WP8ProductID>{d50d6aff-aaf1-49ec-84ee-abe892ce2a0c}</WP8ProductID>
     <WP8PublisherID>{e48ae610-1b50-42ee-8a05-9ebdd7f4bb07}</WP8PublisherID>
+    <Author />
+    <iOSDeviceFamily>1;2</iOSDeviceFamily>
+    <iOSBackgroundMode />
+    <AndroidVersionCode>1</AndroidVersionCode>
+    <WP8Requirements />
+    <WP8Publisher />
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>

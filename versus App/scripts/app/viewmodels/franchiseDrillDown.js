@@ -37,7 +37,7 @@ define(["kendo", "app/data/franchiseDrillDownData", "app/common", "app/config"],
             if (helper.checkLoad(config.params.fDrillDown)) {
                 var data = franchiseDrillDownData.data,
                 	urlBase = config.remoteServices.franchiseYearSearch;
-    			data.dataSource.data({});//clear out last results
+    			//data.dataSource.data({});//clear out last results
                 data.params = config.params.fDrillDown;
                 data.svcUrl = urlBase + data.params +'.json';
                 data.dataSource.read();
