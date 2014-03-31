@@ -67,7 +67,7 @@ define(["kendo", "app/data/teamsData", "app/common", "app/config"], function (ke
                 var data = teamsData.data,
                     yearId = config.params.yearId,
                     urlBase = config.remoteServices.teams;
-                data.dataSource.data({});
+                //data.dataSource.data({});
                 data.svcUrl = urlBase + yearId +'.json';
             	data.dataSource.read();
     			common.resetJsScroller(e);
